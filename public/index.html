@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run genCode Function</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      background-image: url('./bg.avif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .copy-button{
+        background-color: #3490dc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+  
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class=" p-6 rounded-lg shadow-lg backdrop-blur-md max-w-lg w-full">
+    <h1 class="text-4xl font-semibold text-center text-blue-600 mb-6">Hamster Codes Generator</h1>
+    <form id="genCodeForm" class="space-y-4">
+      <div>
+        <label for="runTimes" class="block font-semibold text-gray-300">How many times (1-12):</label>
+        <input type="number" id="runTimes" name="runTimes" min="1" max="12" required class="mt-1 block w-full p-2 border bg-white bg-opacity-10 rounded-md text-white active:ouline-none shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+      </div>
+      <div>
+        <label for="inputValue" class="block font-semibold text-gray-300">Choose Game</label>
+        <select name="options" id="inputValue" class="mt-1 block w-full p-2 border bg-white bg-opacity-10 rounded-md text-white active:ouline-none shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+          <option class="text-black" value="1">My Clone</option>
+          <option class="text-black" value="2">ChainCube</option>
+          <option class="text-black" value="3">TrainMiner</option>
+          <option class="text-black" value="4">BikeRide3D</option>
+        </select>
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Get Keys </button>
+    </form>
+    
+    <div id="results" class="mt-6 space-y-4 text-white flex justify-between  gap-2 flex-col"></div>
+    <div id="" class=" text-white  my-6 ">
+         <a href="t.me/talharaizc"><button class="text-xl text-black  font-semibold bg-[#24A1DE] px-3 py-2 rounded-md w-full">Telegram</button></a>
+    </div>
+  </div>
+  <script>
+    if (window.Telegram && window?.Telegram?.WebApp) {
+        window.Telegram.WebApp.ready();
+    }
+</script>
+  <script src="index.js"></script>
+</body>
+</html>
